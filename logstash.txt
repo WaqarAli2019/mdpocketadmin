@@ -1,0 +1,20 @@
+sudo service logstash start
+
+sudo service logstash enable
+
+sudo -u logstash /usr/share/logstash/bin/logstash --path.settings /etc/logstash -t
+
+
+sudo -u logstash /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/30-elasticsearch-output.conf --path.settings /etc/logstash
+
+
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/30-elasticsearch-output.conf --path.settings /etc/logstash
+
+
+
+
+
+sudo /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/30-elasticsearch-output.conf --path.settings /etc/logstash [WORKING]
+
+
+sudo /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/30-elasticsearch-output.conf --path.data /etc/logstash --path.settings /etc/logstash [WORKING Latest]
