@@ -1,0 +1,2 @@
+creating a file using cat>newfile.txt
+also working in git to learn and excel it
